@@ -1,0 +1,166 @@
+
+/* DEMO CSS */
+body{
+  width:100%;
+  margin:0px;
+  padding:0px;
+  font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;	/* Font to use */
+  background-color:#FFF;
+}
+#heading{
+  height:161px;
+}
+
+#gameHead {
+  /* leave as is for now, this displays the top of game */
+}
+
+/* END DEMO CSS */
+
+#dragScriptContainer{	/* BIG DIV containing HTML needed for the entire script */
+  width:50%;
+  margin:0 auto;
+  border:0px solid #000;
+  height:auto;
+  margin-top:20px;
+  padding: 3px;
+  -moz-user-select:no;
+  overflow:hidden;
+  background-color:#FFF;
+
+}
+h1{
+  margin:5px;
+  text-align: center;
+
+}
+
+#undoBtn {
+  float: left;
+  margin-left: 30px;
+  /* visibility: hidden; hide until game starts*/
+}
+
+.timerLoc {
+  text-align: center;
+  font-size: 1.5em;
+  /* visibility: hidden; hide until game starts*/
+}
+
+#timerVis {
+  visibility:visible;
+}
+
+#startBtn {
+  float: right;
+  margin-right: 30px;
+}
+
+#termDescription{	/* Big div for all the questions */
+  float:right;
+  height:100%;
+  width:300px;
+
+  padding:2px;
+
+  visibility:hidden;	/* Initial state  - Don't change this */
+}
+#termUsed{	/* Big div for all the answers */
+  float:left;
+  height:400px;
+  width:150px;
+  border:1px solid #FFF;
+  padding:2px;
+
+  visibility:hidden; /* Initial state  - Don't change this */
+}
+
+#termDescription div,#termUsed div,#dragContent div{	/* General rules for small divs - i.e. specific questions and answers */
+  width:145px;
+  height:20px;
+  line-height:20px;
+  float:right;
+  margin-right:2px;
+  margin-bottom:2px;
+  text-align:center;
+
+}
+
+#dragContent div{	/* Drag content div - i.e. specific answers when they are beeing dragged */
+  border:1px solid #000;
+}
+
+#termUsed .dragDropSmallBox{	/* Small answer divs */
+  border:1px solid #000;
+  cursor:grab;
+}
+
+#termDescription .dragDropSmallBox{	/* Small answer divs */
+  border:1px solid #000;
+  cursor:grab;
+  background-color:#FFF;
+}
+
+#termDescription div div{	/* DIV after it has been dragged from right to left box */
+  margin:0px;
+  border:0px;
+  padding:0px;
+  background-color:#FFF;
+  cursor:pointer;
+}
+#termDescription .destinationBox{	/* Small empty boxes for the questions - i.e. where answers could be dragged */
+  border:0px;
+  background-color:#DDD;
+  width:147px;	/* Width of #termDescription div + 2 */
+  height:22px;
+}
+#termDescription .correctAnswer{	/* CSS indicating correct answer */
+  background-color:green !important;
+  color:#fff;
+  border:1px solid #000;
+}
+#termDescription .bwrongAnswer{	/* CSS indicating wrong answer */
+  background-color:white;
+  color:black;
+  border:1px solid #000;
+}
+
+#termDescription .bcorrectAnswer{	/* CSS indicating correct answer */
+  background-color:white;
+  color:black;
+  border:1px solid #000;
+}
+
+#termDescription .wrongAnswer{	/* CSS indicating wrong answer */
+  background-color:red;
+  color:#fff;
+  border:1px solid #000;
+}
+
+#instructions {
+  text-align: center;
+}
+
+#dragContent div{
+  background-color:#42f5a1;
+}
+
+#termDescription .dragContentOver{	/* Mouse over question boxes - i.e. indicating where dragged element will be appended if mouse button is relased */
+  border:1px solid #F00;
+}
+
+#termUsed.dragContentOver{	/* Mouse over answer box - i.e. indicating where dragged element will be appended if mouse button is relased */
+  border:1px solid #F00;
+}
+
+/* NEVER CHANGE THIS */
+#dragContent{
+  position:absolute;
+  display:none;
+  cursor: grabbing;
+}
+
+p{
+  margin:2px;
+  font-size:0.9em;
+}

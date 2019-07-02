@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag Drop - quiz script</title>
+		<link rel="stylesheet" type="text/css" href="scripts/that.css">
+		<script type="text/javascript" src="scripts/this.js"></script>
+		<script type="text/javascript" src="data/plswork.json"></script>
+</head>
+<body >
+	<div id="dragScriptContainer">
+		<div id="gameHead">
+			<div id="description">
+				<h1>Quiz Game</h1>
+			</div><br>
+			<input type="button" id="undoBtn" onclick="undo()" value="Undo" type="submit">
+
+			<input type="submit" id="startBtn" onclick="endMePlease()" value="Start">
+			<br><br>
+			<hr>
+			<br>
+			<div id="instructions">
+				<h3>Instructions</h3>
+				Match the Numbers! <br><strong>Drag</strong> the boxes on the <strong>LEFT to</strong> the corresponding boxes on the <strong>RIGHT</strong>.<br><strong>Press</strong> the <strong>Start</strong> button when you're ready <strong>to play</strong>.
+			</div>
+			<div class="timerLoc">
+				<span id="minutes"></span><span id="timerVis" ></span><span id="seconds"></span>
+				<span id="hours"></span><span id="minutes"></span><span id="seconds"></span>
+				<div id="timer"></div>
+			</div>
+			<br>
+				<div id="termUsed">
+					<div class="dragDropSmallBox" id="a1">1</div>
+					<div class="dragDropSmallBox" id="a2">2</div>
+					<div class="dragDropSmallBox" id="a3">3</div>
+					<div class="dragDropSmallBox" id="a4">4</div>
+					<div class="dragDropSmallBox" id="a5">5</div>
+
+				</div>
+				<div id="termDescription">
+					<div class="dragDropSmallBox" id="q1">1</div>
+					<div class="destinationBox"></div>
+					<div class="dragDropSmallBox" id="q2">2</div>
+					<div class="destinationBox"></div>
+					<div class="dragDropSmallBox" id="q3">3</div>
+					<div class="destinationBox"></div>
+					<div class="dragDropSmallBox" id="q4">4</div>
+					<div class="destinationBox"></div>
+					<div class="dragDropSmallBox" id="q5">5</div>
+					<div class="destinationBox"></div>
+
+				</div>
+
+			</div>
+	<div id="dragContent"></div>
+
+	<!-- pull data from the JSON file -->
+	<!--<div id= "data">
+
+	</div> -->
+<!-- button refreshes the page
+	<input type="button" onclick="dragDropResetForm();return false;" value="Reset">
+-->
+</body>
+</html>
