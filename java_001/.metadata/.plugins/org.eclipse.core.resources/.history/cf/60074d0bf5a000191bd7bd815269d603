@@ -1,0 +1,28 @@
+/* Author: Brian Cedillo
+Date: July 2019
+Description: Assignment 1: Head or Tail
+*/
+
+import java.util.*;
+
+public class ThrowaDie {
+	public static void main(String[] args) {
+	
+		Scanner input = new Scanner(System.in);
+		int max = 6;
+		int min = 1;
+		String yuh = input.next(); 
+		//char yes = charAt(0);
+		
+		System.out.println("Press any key to throw a die and press Enter (or Q and Enter to quit)");
+		yuh;
+		do {
+			int dice = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+			System.out.println("You have rolled a " + dice);
+			System.out.println("Play Again? (Y of y) and Enter, any other key and Enter to Quit");
+		} while(y.equalsIgnoreCase("y"));
+        input.close();
+        
+		
+	}
+}

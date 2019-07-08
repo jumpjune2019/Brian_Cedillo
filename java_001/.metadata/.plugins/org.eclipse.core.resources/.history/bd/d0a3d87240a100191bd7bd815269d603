@@ -1,0 +1,50 @@
+package utilitiesarraystring;
+
+public class ArrUtil {
+	public static void main(String[] args) {
+		
+		
+		
+		System.out.println("This is the a test of the arrayHasExactMatch "
+				+ "and indexOfOccurenceInArray methods");
+		System.out.println("The array to test contains the following items");
+		System.out.println(" {\"Bozo\", \"FooBar\", \"Delta\", \"Foozball\", \"Demo\", \"Money\", \"Zoo\"}");
+		
+		
+		String myList[] = {"Bozo", "FooBar", "Delta", "Foozball", "Demo", "Money", "Zoo"};
+		
+		ArrayAndStrings question = new ArrayAndStrings();
+		
+		//found will be false
+		question.arrayHasExactMatch(myList, "zo", false);
+		//found will be true
+		question.arrayHasExactMatch (myList, "zoo", false);
+		//found will be false
+		question.arrayHasExactMatch (myList, "zoo", true);
+		//found will be false
+		question.arrayHasExactMatch (myList, "foobar", true);
+		//found will be true
+		question.arrayHasExactMatch (myList, "foobar", false);
+		//found will be false
+		question.arrayHasExactMatch (myList, "delta", true);
+		//found will be true
+		question.arrayHasExactMatch (myList, "Delta", true);
+		
+		//foundIndexes will contain [-1]
+		question.indexOfOccuranceInArray (myList, "zo", false);
+		//foundIndexes will contain [5]
+		question.indexOfOccuranceInArray (myList, "zoo", false);
+		//foundIndexes will contain [-1]
+		question.indexOfOccuranceInArray (myList, "zoo", true);
+		//foundIndexes will contain [-1]
+		question.indexOfOccuranceInArray (myList, "foobar", true);
+		//foundIndexes will contain [1]
+		question.indexOfOccuranceInArray (myList, "foobar", false);
+		//foundIndexes will contain [-1]
+		question.indexOfOccuranceInArray (myList, "delta", true);
+		//foundIndexes will contain [2]
+		question.indexOfOccuranceInArray (myList, "Delta", true);
+
+	}
+
+}

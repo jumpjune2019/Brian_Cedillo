@@ -1,0 +1,205 @@
+/* Author: Brian Cedillo
+Date: July 2019
+Description: Assignment 7: Game of Dice
+*/
+
+import java.util.*;
+import java.util.Scanner;
+public class GameofDice {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		boolean playing = true;
+	    String Dice[][] = new String[6][6];
+	    Dice[0][0] = "Snake eyes";
+	    Dice[0][1] = "Australian yo";
+	    Dice[0][2] = "Little Joe From Kokomo";
+	    Dice[0][3] = "No field five";
+	    Dice[0][4] = "Easy six";
+	    Dice[0][5] = "Six one you're done";
+	    Dice[1][0] = "Ace caught a deuce";
+	    Dice[1][1] = "Ballerina";
+	    Dice[1][2] = "The fever";
+	    Dice[1][3] = "Jimmie Hicks";
+	    Dice[1][4] = "Benny Blue";
+	    Dice[1][5] = "Easy eight";
+	    Dice[2][0] = "Easy four";
+	    Dice[2][1] = "OJ";
+	    Dice[2][2] = "Brooklyn Forest";
+	    Dice[2][3] = "Big Red";
+	    Dice[2][4] = "Eight from Decatur";
+	    Dice[2][5] = "Nina from Pasadena";
+	    Dice[3][0] = "Little Phoebe";
+	    Dice[3][1] = "Easy six";
+	    Dice[3][2] = "Skinny McKinney";
+	    Dice[3][3] = "Square pair";
+	    Dice[3][4] = "Railroad nine";
+	    Dice[3][5] = "Big one on the end";
+	    Dice[4][0] = "Sixie from Dixie";
+	    Dice[4][1] = "Skinny Dugan";
+	    Dice[4][2] = "Easy eight";
+	    Dice[4][3] = "Jesse James";
+	    Dice[4][4] = "Puppy paws";
+	    Dice[4][5] = "Yo";
+	    Dice[5][0] = "The Devil";
+	    Dice[5][1] = "Easy eight";
+	    Dice[5][2] = "Lou Brown";
+	    Dice[5][3] = "Tennessee";
+	    Dice[5][4] = "Six five no jive";
+	    Dice[5][5] = "Midnight";
+	    int max = 6;
+        int min = 1;
+	    
+	    /*
+	     System.out.println("Welcome to the dice throw challange!");
+		System.out.println("Do you feel lucky? \"Punk\"... do ya?");
+		System.out.println("Press any key and enter to throw your dice or press (Q or q) to chicken your butt off...");
+		String play  = input.next();
+		if(play.equalsIgnoreCase("Q")){
+			System.out.println("See ya later alligator!");
+			System.exit(0);
+		} 
+		else {
+		*/
+		    do {
+		        System.out.println("Rolling the dice!!");
+		        System.out.println();
+		        int i = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+				int j = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+		        int comTotal = i + j;
+		        System.out.println(i + " , " + j + " that is a " + Dice[i-1][j-1] );
+		    
+	            int h = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+				int k = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+	            int playerTotal = h + k;
+	            System.out.println(h + "," + k + "that is a " + Dice[h-1][k-1] );
+	            
+		        if (comTotal > playerTotal) {
+		            System.out.println("I win!!!");
+		            System.out.print("Wanna try again?");
+		        }
+		        
+		        else if (comTotal < playerTotal) {
+		            System.out.print("YOU WIN!!! Did you cheat???");
+		        }
+		        
+		        else if (h == k & i != j) {
+		            System.out.print("Damn! You win on a Double! What Luck!/n Did you cheat?? Gimme another try, c'mon Press any key and ENTER to throw your dice  press Q or q) to quit");
+		        }
+		        else if (i == j & h != k) {
+		            System.out.print("Damn! I win on a Double! Ah! I pity you fool!/n Wanna try again?");
+		        }
+		        
+		        else if (comTotal == playerTotal) {
+		            System.out.println("Stalemate! You're tough, let's try for  a tie breaker");
+		        }
+		        
+		        System.out.println(" Press any key and ENTER to throw your dice  press Q or q) to quit");
+		        String exit  = input.nextLine();
+				if(exit.equalsIgnoreCase("Q")){
+					System.out.println("Thanks for being a sport! laters!");
+					System.exit(0);
+				}
+				else {
+					playing = true;
+	        } 
+	    }   while (playing = true);
+	}
+}
+	/* public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner input = new Scanner(System.in);
+		int max = 6;
+		int min = 1;
+		Integer[] diceArray = {0, 0};
+		
+		System.out.println("Welcome to the dice throw challange!");
+		System.out.println("Do you feel lucky? \"Punk\"... do ya?");
+		System.out.println("Press any key and enter to throw your dice or press (Q or q) to chicken your butt off...");
+		String play  = input.next();
+		if(play.equalsIgnoreCase("Q")){
+			System.exit(0);
+		} 
+		else {
+			do {
+				System.out.println("Rolling the dice!!");
+				int x = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+				int y = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+				System.out.println("First Die: " + x);
+				if (diceArray[0] == 1 & diceArray[1] == 1) {
+					System.out.println("You have rolled " + diceArray[0] + "and " + diceArray[1] + " > " +  );
+				}
+				else if ((diceArray[0] == 2) && (diceArray[1] == 1)) {
+					group2 +
+				}
+				else if (diceArray[0] == 2 & diceArray[1] == 2) {
+					group3 += 1;
+				}
+				else if (diceArray[0] == 3 & diceArray[1] == 1) {
+					group4 += 1;
+				}
+				else if (diceArray[0] == 3 & diceArray[1] == 2) {
+					group5 += 1;
+				}
+				else if (diceArray[0] == 3 & diceArray[1] == 3) {
+					group6 += 1;
+				}
+				else if (diceArray[0] == 4 & diceArray[1] == 1) {
+					group7 += 1;
+				}
+				else if (diceArray[0] == 4 & diceArray[1] == 2) {
+					group8 += 1;
+				}
+				else if (diceArray[0] == 4 & diceArray[1] == 3) {
+					group9 += 1;
+				}
+				else if (diceArray[0] == 4 & diceArray[1] == 4) {
+					group10 += 1;
+				}
+				else if (diceArray[0] == 5 & diceArray[1] == 1) {
+					group11 += 1;
+				}
+				else if (diceArray[0] == 5 & diceArray[1] == 2) {
+					group12 += 1;
+				}
+				else if (diceArray[0] == 5 & diceArray[1] == 3) {
+					group13 += 1;
+				}
+				else if (diceArray[0] == 5 & diceArray[1] == 4) {
+					group14 += 1;
+				}
+				else if (diceArray[0] == 5 & diceArray[1] == 5) {
+					group15 += 1;
+				}
+				else if (diceArray[0] == 6 & diceArray[1] == 1) {
+					group16 += 1;
+				}
+				else if (diceArray[0] == 6 & diceArray[1] == 2) {
+					group17 += 1;
+				}
+				else if (diceArray[0] == 6 & diceArray[1] == 3) {
+					group18 += 1;
+				}
+				else if (diceArray[0] == 6 & diceArray[1] == 4) {
+					group19 += 1;
+				}
+				else if (diceArray[0] == 6 & diceArray[1] == 5) {
+					group20 += 1;
+				}
+				else if ((diceArray[0] == 6) & (diceArray[1] == 6)) {
+					group21 += 1;
+				}
+			}
+				System.out.println("");
+				System.out.println("Play Again? (Y or y) and Enter, any other key and Enter to Quit");
+			} while(input.next().equalsIgnoreCase("y"));
+	        input.close();
+		}
+	}
+	*/
+
+
+
+
+
+

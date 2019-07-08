@@ -1,0 +1,7 @@
+package arrayutils;
+
+public class ArrUtil {
+	public static void main(String[] args) {
+		//static methods
+	}
+}

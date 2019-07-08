@@ -1,0 +1,103 @@
+/* Author: Brian Cedillo
+Date: July 2019
+Description: Assignment 6: Labeling Pair of Dices (Matrix)
+*/
+
+import java.util.*;
+
+public class LabellingPairofDices {
+	public static int row;
+    public static int col;
+    public static String [] rownum = {"1 |","2 |","3 |","4 |","5 |","6 |","7 |","8 |","9 |"};
+	public static void main(String[] args) {
+/*
+	int[][] array = {
+            {1, 2, 3, 4, 5, 6}, 
+            {1, 2, 3, 4, 5, 6},
+            {1, 2, 3, 4, 5, 6},
+      };			
+ 
+	
+	int[][] array = new int[6][6];
+	
+	System.out.println("Dice Combinations Label Matrix");
+
+		int array[][] = {{8,6,7},{4,3,9}};
+	    int array1[][] = {{2,4},{5,7},{1,1}};
+	    int array2[][] = new int[3][3];
+	    int x= array.length;
+	    System.out.println("Matrix 1 : ");
+	      for(int i = 0; i < x; i++) {
+	      for(int j = 0; j <= x; j++) {
+	        System.out.print(" "+ array[i][j]);
+	      }
+	    System.out.println();
+	    }
+	*/
+		
+		 
+		System.out.println("      1   2   3   4   5   6   7   8   9  10");
+	      System.out.println("   ----------------------------------------");  
+	        for (int row = 0; row < rownum.length; row++)
+	      {
+	        System.out.printf("%-1s",rownum[row]);
+	        {
+	         for (int col = 0; col < array[row].length; col++)
+	         {
+	           System.out.printf("%4d", array[row][col]);
+	         }
+	         System.out.println();
+	        }
+	      }
+	}
+	
+	
+	
+	public static int SeatPrice(int [][] array, int value)
+    {
+        int index = 0;
+        int element = -1;
+        boolean found = false;
+
+        outerloop:
+        for (row = 0; row < array.length; row++)
+        {
+          for (col = 0; col < array[row].length; col++)
+          {
+            if (array[row][col] == value)
+            {
+              found = true;
+              element = array[row][col];
+              array[row][col] = 0;
+              break outerloop;
+            }
+          }
+        }
+        index++;
+        return element;
+    }
+    
+    public static int Location(int [][] array, int rowchoice, int colchoice)
+    {
+        int index = 0;
+        int element = -1; 
+        boolean found = false; 
+
+        outerloop:
+        for (row = 0; row < array.length; row++)
+        {
+          for (col = 0; col < array[row].length; col++)
+          {
+            if (row == rowchoice && col == colchoice)
+            {
+              found = true;
+              element = array[row][col];
+              array[row][col] = 0;
+              break outerloop;
+            }
+          }
+        }
+        index++;
+        return element;
+    }
+}

@@ -1,0 +1,90 @@
+/* Author: Brian Cedillo
+Date: July 2019
+Description: Assignment 6: Labeling Pair of Dices (Matrix)
+*/
+
+import java.util.*;
+import java.util.Arrays;
+public class LabellingPairofDices {
+	public static void main(String[] args) {
+		
+		String [][] seating = {{"Snake Eyes", "Australian yo", "Little Joe From Kokomo", "No Field Five", "Easy six", "Six one you're done"}, 
+							   {"Ace caught a deuce" , "Ballerina", "The fever", "Jimmie Hicks", "Benny Blue", "Easy eight"},
+							   {"Easy four", "OJ", "Brooklyn Forest", "Big Red", "Eighter From Decatur", "Nina from Pasadena"},
+							   {"Little Phoebe", "Easy Six", "Skinny McKinney", "Square pair", "Railroad nine", "Big one on the end"},
+							   {"Sixie from Dixie", "Skinny Dugan", "Easy Eight", "Jesse James", "Puppy paws", "Yo"},
+							   {"The Devil", "Easy Eight", "Lou Brown", "Tennessee", "Six five no jove", "Midnight"}};
+	    
+		String [] rownum = {"Die 1 |","Die 2 |","Die 3 |","Die 4 |","Die 5 |","Die 6 "};
+		String [] colDie = {"Die 1 |","Die 2 |","Die 3 |","Die 4 |","Die 5 |","Die 6 "};
+		//System.out.println(Arrays.toString(colDie));
+		
+		for (String element: colDie) {
+            System.out.println(element);
+        }
+		
+		System.out.println(Arrays.deepToString(seating));
+		
+	      for (int row = 0; row < rownum.length; row++)
+	      {
+	        System.out.printf("%-1s",rownum[row]);
+	        {
+	         for (int col = 0; col < seating[row].length; col++)
+	         {
+	           System.out.printf("%4d", seating[row][col]);
+	         }
+	         System.out.println();
+	        }
+	      }
+	    
+	    
+		
+		TheaterSeats a = new TheaterSeats();
+		a.Seatingchart(seating);
+		
+	}
+}
+	
+		
+		
+		/*
+	int[][] array = {
+            {Snake Eyes, Australian yo, Little Joe From Kokomo, No Field Five, Easy six, Six one you're done}, 
+            {1, 2, 3, 4, 5, 6},
+            {1, 2, 3, 4, 5, 6},
+      };			
+ 
+	
+	int[][] array = new int[6][6];
+	
+	System.out.println("Dice Combinations Label Matrix");
+
+		int array[][] = {{8,6,7},{4,3,9}};
+	    int array1[][] = {{2,4},{5,7},{1,1}};
+	    int array2[][] = new int[3][3];
+	    int x= array.length;
+	    System.out.println("Matrix 1 : ");
+	      for(int i = 0; i < x; i++) {
+	      for(int j = 0; j <= x; j++) {
+	        System.out.print(" "+ array[i][j]);
+	      }
+	    System.out.println();
+	    }
+	
+		
+		//String [] rownum = {"Die 1 |","Die 2 |","Die 3 |","Die 4 |","Die 5 |","Die 6 |","Die 7 |","Die 8 |","Die 9 |"};
+		
+		System.out.println("      1   2   3   4   5   6   7   8   9  10");
+	      System.out.println("   ----------------------------------------");  
+	        for (int row = 0; row < rownum.length; row++)
+	      {
+	        System.out.printf("%-1s",rownum[row]);
+	        {
+	         for (int col = 0; col < array[row].length; col++)
+	         {
+	           System.out.printf("%4d", array[row][col]);
+	         }
+	         System.out.println();
+	        }
+	      } */
+	

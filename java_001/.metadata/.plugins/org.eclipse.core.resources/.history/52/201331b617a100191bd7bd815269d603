@@ -1,0 +1,24 @@
+public class TheaterSeats
+	{
+		int row;
+	    int col;
+	    String [] rownum = {"Die 1 |","Die 2 |","Die 3 |","Die 4 |","Die 5 |","Die 6 |"};
+
+	    public void Seatingchart(int [][] array)
+	    { System.out.println("      1   2   3   4   5   6   7   8   9  10");
+	      System.out.println("   ----------------------------------------");  
+	        for (int row = 0; row < rownum.length; row++)
+	      {
+	        System.out.printf("%-1s",rownum[row]);
+	        {
+	         for (int col = 0; col < array[row].length; col++)
+	         {
+	           System.out.printf("%4d", array[row][col]);
+	         }
+	         System.out.println();
+	        }
+	      }
+	    
+	    }
+	}
+		

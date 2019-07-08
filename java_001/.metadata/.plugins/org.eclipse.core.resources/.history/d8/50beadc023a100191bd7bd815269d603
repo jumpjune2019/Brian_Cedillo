@@ -1,0 +1,24 @@
+/* Author: Brian Cedillo
+Date: July 2019
+Description: Assignment 7: Game of Dice
+*/
+import java.util.*;
+import java.util.Arrays;
+public class GameofDice {
+
+	public static void main(String[] args) {
+		/*
+		 * do you want to play the cpu? - y and enter
+		 * throw dice = enter again to throw?
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		
+		System.out.println("Welcome to the dice throw challange!");
+		System.out.println("Do you feel lucky? \"Punk\"... do ya?");
+		System.out.println();
+	}
+}

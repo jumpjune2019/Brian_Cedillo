@@ -1,0 +1,68 @@
+/* Author: Brian Cedillo
+Date: July 2019
+Description: Assignment 5: Keeping Way More Stats
+*/
+
+import java.util.*;
+
+public class KeepingWayMoreStats {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int max = 6;
+		int min = 1;
+		//char yes = charAt(0);
+		
+		System.out.println("Press any key to throw a pair of dice and press Enter (or Q and Enter to quit)");
+		String play  = input.next();
+		if(play.equals("Q")){
+			System.exit(0);
+		} 
+		else {
+			do {
+				int x = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+				int y = (int)Math.floor((Math.random() * ((max - min) + 1)) + min);
+				System.out.println("You have rolled the following: ");
+				System.out.println("First Die: " + x);
+				System.out.println("Second Die: " + y);
+				System.out.println("Play Again? (Y or y) and Enter, any other key and Enter to Quit");
+			} while(input.next().equalsIgnoreCase("y"));
+	        input.close();
+		}
+		
+		System.out.println("100 Random 2 dice toss stats");
+		//if(sort = groupA){print how many times it printed}
+		//else if (sort== groupB){}...
+		
+		System.out.println("Dice 1 and dice 1: " + group1 + "times");
+		System.out.println("Dice 2 and dice 1: " + group2 + "times");
+		System.out.println("Dice 2 and dice 2: " + group3 + "times");
+		System.out.println("Dice 3 and dice 1: " + group4 + "times");
+		System.out.println("Dice 3 and dice 2: " + group5 + "times");
+		System.out.println("Dice 3 and dice 3: " + group6 + "times");
+		System.out.println("Dice 4 and dice 1: " + group7 + "times");
+		System.out.println("Dice 4 and dice 2: " + group8 + "times");
+		System.out.println("Dice 4 and dice 3: " + group9 + "times");
+		System.out.println("Dice 4 and dice 4: " + group10 + "times");
+		System.out.println("Dice 5 and dice 1: " + group11 + "times");
+		System.out.println("Dice 5 and dice 2: " + group12 + "times");
+		System.out.println("Dice 5 and dice 3: " + group13 + "times");
+		System.out.println("Dice 5 and dice 4: " + group14 + "times");
+		System.out.println("Dice 5 and dice 5: " + group15 + "times");
+		System.out.println("Dice 6 and dice 1: " + group16 + "times");
+		System.out.println("Dice 6 and dice 2: " + group17 + "times");
+		System.out.println("Dice 6 and dice 3: " + group18 + "times");
+		System.out.println("Dice 6 and dice 4: " + group19 + "times");
+		System.out.println("Dice 6 and dice 5: " + group20 + "times");
+		System.out.println("Dice 6 and dice 6: " + group21 + "times");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
