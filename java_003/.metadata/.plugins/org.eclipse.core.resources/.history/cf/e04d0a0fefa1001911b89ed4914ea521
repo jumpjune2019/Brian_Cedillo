@@ -1,0 +1,56 @@
+package compare;
+//import java.io.FileInputStream;  
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class compare {
+	public static void write (String filename, int[]x) throws IOException{
+		  BufferedWriter outputWriter = null;
+		  outputWriter = new BufferedWriter(new FileWriter(filename));
+		  for (int i = 0; i < x.length; i++) {
+		    // Maybe:
+		    outputWriter.write(x[i]+"");
+		    // Or:
+		    outputWriter.write(Integer.toString(x[i]));
+		    outputWriter.newLine();
+		  }
+		  outputWriter.flush();  
+		  outputWriter.close();  
+		}
+
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	
+	
+	public static void main(String args[]){    
+        try{    
+          FileInputStream fin = new FileInputStream("/Users/briancedillo/java_training/assignments/java_003/compare/src/compare/testout.txt");    
+          int i=0;   
+          String[] compare;
+          
+          
+          while((i=fin.read())!=-1){    
+           System.out.print((char)i);    
+          }    
+          fin.close();    
+        }catch(Exception e){System.out.println(e);}    
+       }    
+}
+*/

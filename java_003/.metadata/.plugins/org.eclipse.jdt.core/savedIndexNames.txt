@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+/Users/briancedillo/java_training/assignments/java_003/.metadata/.plugins/org.eclipse.jdt.core
+4250987520.index
+1392080472.index
+2216492239.index
+855709060.index
+3310712448.index
+586008997.index
+3165068357.index
+3542022222.index
+914595108.index
+603509956.index
+1708226736.index
+3436727285.index
+224660176.index
+4154263650.index

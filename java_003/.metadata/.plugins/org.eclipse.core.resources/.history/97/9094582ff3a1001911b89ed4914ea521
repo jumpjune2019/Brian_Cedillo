@@ -1,0 +1,82 @@
+package matrixchoice;
+
+import java.io.*;
+import java.util.Arrays;
+//bin directory
+//java Main afile.txt anotherfile.txt
+public class main {
+		
+		public static void print2D(String labels[][]) 
+	    { 
+	        // Loop through all rows 
+	        for (String[] row : labels) 
+	  
+	            // converting each row as string 
+	            // and then printing in a separate line 
+	            System.out.println(String.format("%-22s ",Arrays.toString(row)); 
+	    } 
+	  
+	    public static void main(String args[]) throws IOException 
+	    { 
+	    	String [][] labels = {{"Snake Eyes", "Australian yo", "Little Joe From Kokomo", "No Field Five", "Easy six", "Six one you're done"}, 
+					   {"Ace caught a deuce" , "Ballerina", "The fever", "Jimmie Hicks", "Benny Blue", "Easy eight"},
+					   {"Easy four", "OJ", "Brooklyn Forest", "Big Red", "Eighter From Decatur", "Nina from Pasadena"},
+					   {"Little Phoebe", "Easy Six", "Skinny McKinney", "Square pair", "Railroad nine", "Big one on the end"},
+					   {"Sixie from Dixie", "Skinny Dugan", "Easy Eight", "Jesse James", "Puppy paws", "Yo"},
+					   {"The Devil", "Easy Eight", "Lou Brown", "Tennessee", "Six five no jove", "Midnight"}};
+	        print2D(labels); 
+	    } 
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		
+		
+		int i;
+		FileInputStream fin = null;
+		FileOutputStream fout = null;
+		
+		if(args.length != 2) {
+			System.out.println("Usage: CopyFile from to");
+			return;
+		}
+		
+		try {
+			fin = new FileInputStream(args[0]);
+			fout = new FileOutputStream(args[1]);
+			
+			do {
+				i = fin.read();
+				if(i != -1) {
+					fout.write(i);
+				}
+			} while (i != -1);
+		} catch (IOException exc) {
+			System.out.println("I/O Error: " + exc);
+		} finally {
+			try {
+				if(fin != null) {
+					fin.close();
+				}
+			} catch (IOException exc) {
+				System.out.println("Error Closing File: " + args[0]);
+			}
+			
+			try {
+				if(fout != null) {
+					fout.close();
+				}
+			} catch (IOException exc) {
+				System.out.println("Error Closing File: " + args[1]);
+			}
+			
+		}
+
+	}*/
+
+}

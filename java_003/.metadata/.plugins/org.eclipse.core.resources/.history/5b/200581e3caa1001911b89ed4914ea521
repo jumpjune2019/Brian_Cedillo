@@ -1,0 +1,16 @@
+package matrixchoice;
+
+
+import java.io.FileWriter;
+
+public class workingthisproblem {
+  public static void main(String[] argv) throws Exception {
+    FileWriter fw = new FileWriter("test.txt");
+    String strs[] = { "com", "exe", "doc" };
+
+    for (int i = 0; i < strs.length; i++) {
+      fw.write(strs[i] + "\n");
+    }
+    fw.close();
+  }
+}

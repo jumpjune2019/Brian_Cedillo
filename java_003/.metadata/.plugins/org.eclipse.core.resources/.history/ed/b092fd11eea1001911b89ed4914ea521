@@ -1,0 +1,15 @@
+package compare;
+import java.io.FileInputStream;  
+public class compare {
+	public static void main(String args[]){    
+        try{    
+          FileInputStream fin = new FileInputStream("/Users/briancedillo/java_training/assignments/java_003/compare/src/compare/testout.txt");    
+          int i=0;   
+          String[] compare = new String[];
+          while((i=fin.read())!=-1){    
+           System.out.print((char)i);    
+          }    
+          fin.close();    
+        }catch(Exception e){System.out.println(e);}    
+       }    
+}
