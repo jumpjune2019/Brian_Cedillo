@@ -1,7 +1,7 @@
 package matrixcustomhandlers;
 
 public class Exceptions extends Exception {
-	public Exceptions() {
-		super();
+	public Exceptions(String msg) {
+		super(msg);
 	}
 }

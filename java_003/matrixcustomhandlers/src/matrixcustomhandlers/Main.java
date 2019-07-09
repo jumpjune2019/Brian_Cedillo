@@ -35,6 +35,7 @@ public class Main {
 	  
 	    public static void main(String args[]) throws IOException 
 	    { 
+	
 	    	
 	    	Scanner input = new Scanner(System.in);
 	    	String [][] labels = {{"Snake Eyes", "Australian yo", "Little Joe From Kokomo", "No Field Five", "Easy six", "Six one you're done"}, 
@@ -54,8 +55,8 @@ public class Main {
 					   "FOR THIS PROGRAM TO WORK ONLY USE NUMBERS");
 	    	
 	    	StringBuilder builder = new StringBuilder();
-	    	int option  = input.nextInt();
-	    	
+	    	//int option  = input.nextInt();
+	    	String option = "";	
 	    	
 	    	/*try {
 	    		System.out.println("options " + option);
@@ -66,14 +67,26 @@ public class Main {
 	    		 System.out.println("Exception occurred");
 	    	    }
 	    	    */
+	    	
 	    	//printing on SCREEN ONLY
+	    	do {
 	    	try {
-		    	if(option == 1){
+	    		/*while (option != "1" || option != "2" || option != "3" ) {                 
+	                System.out.print("Invalid. Re-enter number: "); 
+	                option = input.nextLine() ;  
+	            } */
+	    		
+	    		option = input.nextLine();
+	    		
+	    		name(option);
+	    		
+		    	if(option.equals( "1")){
 		    		print2D(labels);
 		    		System.out.println("\nProgram Ended");
 		    	}
-		    	else if(option == 2) {
+		    	else if(option.equals( "2")) {
 		    		for (int row = 0; row < rownum.length; row++) {
+		    			ar(row+1);
 		    			builder.append(String.format("%23s",colDie[row]));
 						}
 		    			builder.append("\n\n");
@@ -93,7 +106,7 @@ public class Main {
 		    		writer.close();
 		    		System.out.println("\nArray was written into txt file.\nProgram Ended");
 		    	}
-		    	else if(option == 3) {   
+		    	else if(option.equals( "3")) {   
 		    		print2D(labels);
 		    		for (int row = 0; row < rownum.length; row++) {
 		    			builder.append(String.format("%23s",colDie[row]));
@@ -116,13 +129,30 @@ public class Main {
 		    		System.out.println("\nProgram Ended");
 		    	} 
 		    	else {
-		    	    	throw new InputMismatchException("Wrong Input! I can only take #'s 1-3");
-		    	    }
-		    	
-	    	}catch(InputMismatchException e) {
-	    		 System.out.println("Exception occurred");
-	    	}
+		    	    	
+		    	    }//InputMismatchException
+	    	}catch (InputMismatchException|Excpt|Ex e) {
+	    	    System.out.println(e.getMessage());
 	    	    
+	    	    
+	    	}
+	    }while(option != "q" ||option != "Q");
+	}
+	    public static void name(String num) throws Excpt {
+	    	if(num.equals( "1") || num.equals( "2") || num.equals( "3")) {
+	    		System.out.println("test");
+	    	}
+	    	else {
+	    		throw new Excpt("Wrong Input");
+	    	}
+	    	
 	    }
-} 
+	    public static void ar(int c) throws Ex {
+	    	if (c <7 && c > 0) {
+	    		
+	    	}
+	    	else{
+	    		throw new Ex("Out Of Bouds");
+	    	}
+} }
 	    
