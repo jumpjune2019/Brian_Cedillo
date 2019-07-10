@@ -23,46 +23,52 @@ public class Main {
 		 System.out.println("Creating Phonebook.");
 		 boolean yes = false;
 		 for( int x = 0; x < array.length; x++) {
-			 for( int y = 0; y < 3; y++) {
-					do{
-						try{
-	                    	System.out.println("Enter name: ");
-		                    data = input.nextLine();
-		                    ar(data);
-		                    if(!data.isEmpty()){
-		                    yes = true;
-		                    array[x][y] = data;
-		                    }
-	                    }catch (Exception e){
-        		    	System.out.println("Input Needed");
-	                    }
-					}while(yes = false);
-					 System.out.println(y); 
-					 
+			 for( int y = 0; y < array.length; y++) {
+				 if(y == 0){
 					 do{
-		                try{
-	                    	System.out.println("Enter Phone Number: ");
-		                    data = input.nextLine();
-		                    ar(data);
-		                    array[x][y] = data;
+						 try{
+		                    	System.out.println("Enter name: ");
+			                    data = input.nextLine();
+			                    ar(data);
+			                    if(!data.isEmpty()){
+			                    yes = true;
+			                    array[x][0] = data;
+			                    System.out.println("works");
+			                    }
 		                    }catch (Exception e){
 		        		    	System.out.println("Input Needed");
 		        		 }
-		                	System.out.println(y);
-		                }while(yes = false);
+					}while(yes = false);
+					 System.out.println("goes through");
+				 }
+					 
+					 
+					 //do{	
+					 else if(y == 1){
+		                	try{
+		                    	System.out.println("Enter Phone Number: ");
+			                    data = input.nextLine();
+			                    ar(data);
+			                    array[x][1] = data;
+		                    }catch (Exception e){
+		        		    	System.out.println("Input Needed");
+		        		 }
+		                    
+		                }while(!data.equals(null));
 		                
 		                do{
+		               if(y == 2){
 		                	try{
 		                    	System.out.println("Input Needed");
 			                    data = input.nextLine();
 			                    ar(data);
-			                    array[x][y] = data;
-			                    
-		                    }
-		                	catch (Exception e){
+			                    array[x][2] = data;
+		                    }catch (Exception e){
 		        		    	System.out.println("Exception found: " + e);
-		        		 }	
-	         }while(yes = false); 
+		        		 }
+				 
+	            }	
+	         }while(!data.equals(null)); 
 		    
 		}
 			 }

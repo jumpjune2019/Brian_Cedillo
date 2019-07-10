@@ -24,20 +24,24 @@ public class Main {
 		 boolean yes = false;
 		 for( int x = 0; x < array.length; x++) {
 			 for( int y = 0; y < 3; y++) {
-					do{
-						try{
-	                    	System.out.println("Enter name: ");
-		                    data = input.nextLine();
-		                    ar(data);
-		                    if(!data.isEmpty()){
-		                    yes = true;
-		                    array[x][y] = data;
-		                    }
-	                    }catch (Exception e){
-        		    	System.out.println("Input Needed");
-	                    }
+					 do{
+						 try{
+		                    	System.out.println("Enter name: ");
+			                    data = input.nextLine();
+			                    ar(data);
+			                    if(!data.isEmpty()){
+			                    yes = true;
+			                    array[x][y] = data;
+			                    System.out.println("works");
+			                    }
+		                    }catch (Exception e){
+		        		    	System.out.println("Input Needed");
+		        		 }
 					}while(yes = false);
-					 System.out.println(y); 
+					 System.out.println("goes through");
+					 System.out.println(y);
+
+					 
 					 
 					 do{
 		                try{
@@ -48,6 +52,7 @@ public class Main {
 		                    }catch (Exception e){
 		        		    	System.out.println("Input Needed");
 		        		 }
+		                	y++;
 		                	System.out.println(y);
 		                }while(yes = false);
 		                
