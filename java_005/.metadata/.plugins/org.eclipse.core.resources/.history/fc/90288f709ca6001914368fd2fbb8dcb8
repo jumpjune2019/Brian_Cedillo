@@ -1,0 +1,34 @@
+package trafficlight;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+        System.out.println( "Enter Terminates Program!");
+        waitForEnter();
+    }
+    synchronized static void waitForEnter(){
+        ThreadControl lights= new ThreadControl("lights");
+        Scanner scanner = new Scanner(System.in);
+        String readString = scanner.nextLine();
+
+        while(readString.equals("")) {
+
+
+            if (readString.isEmpty()) {
+                System.out.println("Traffic Light Simulator is Done!");
+                lights.mystop();
+
+
+                break;
+            }
+
+            if (scanner.hasNextLine()) {
+                readString = scanner.nextLine();
+            } else {
+                readString = null;
+            }
+
+        }
+    }
+}

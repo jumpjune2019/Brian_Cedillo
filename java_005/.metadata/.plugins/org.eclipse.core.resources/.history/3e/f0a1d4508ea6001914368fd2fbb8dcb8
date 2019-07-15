@@ -1,0 +1,55 @@
+package trafficlight;
+
+public class anotherone {
+/* 
+ * Automatically cycle Green, Red, Yellow 
+ * threads for the 3 states one thread to stop?
+ * enumeration results 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
+	
+	public static class TrafficLight {
+		static Signal color = Signal.RED;
+		public void change() {
+		    switch(color) {
+		      // Note that you don't have to say Signal.RED
+		      // in the case statement:
+		      case RED:    color = Signal.GREEN;
+		                   break;
+		      case GREEN:  color = Signal.YELLOW;
+		                   break;
+		      case YELLOW: color = Signal.RED;
+		                   break;
+		    }
+		}
+	}
+	  public static class StopGo {
+		  static Movement TrafficMovement = Movement.Go;
+		  public void change() {
+			  switch(TrafficMovement) {
+			      // Note that you don't have to say Signal.RED
+			      // in the case statement:
+			      case Go:    TrafficMovement = Movement.Beware;
+			                   break;
+			      case Beware:  TrafficMovement = Movement.Stop;
+			                   break;
+			      case Stop: TrafficMovement = Movement.Go;
+		                   break;
+			  }
+		  }
+	  }
+	
+	
+	public static void main(String agrs[]) {
+		
+		//print loop.print
+	}
+	
+	
+	
+}

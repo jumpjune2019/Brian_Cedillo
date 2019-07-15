@@ -1,0 +1,16 @@
+package trafficlight;
+
+enum EnumTest {
+    GREEN(5000), RED(3000), YELLOW(2000);
+    private Integer time;
+    //constructor
+
+    void Status(Integer t){
+        time = t;
+    }
+    int getTime(){
+
+        return time;
+    }
+}
+

@@ -1,0 +1,18 @@
+package trafficlight;
+
+enum Lights {
+    GREEN(5000, "YOOOOO"), RED(3000), YELLOW(2000);
+	
+    private Integer time;
+    private String label;
+    
+    Lights(Integer t, String str) {
+        time = t;
+        label = str;
+    }
+    
+    int getTime() {
+        return time;
+    }
+}
+

@@ -1,0 +1,11 @@
+package trafficlight;
+
+public enum EnumTest {
+	
+}
+enum Signal { 
+	GREEN, YELLOW, RED, 
+	}
+enum Movement { 
+	Go, Beware, Stop, 
+	}

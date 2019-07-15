@@ -1,0 +1,52 @@
+package trafficlight;
+
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+
+class ThreadControl implements Runnable {
+    // Create our fields
+    Thread lite;
+    boolean suspended;
+    boolean stopped;
+    ThreadControl(String name) {
+        lite = new Thread(this, name);
+        suspended = false;
+        stopped = false;
+        lite.start();
+    }
+    ThreadControl t1 = null;
+    public void run() {
+        try {
+            System.out.println("Traffic Light Simulator is a Go!");
+            while(!stopped) {
+            	ThreadControl.
+                System.out.println("Light is Green - Go!");
+                Thread.sleep(Lights.GREEN.getTime());
+                System.out.println("Light is Yellow - Beware!");
+                Thread.sleep(Lights.YELLOW.getTime());
+                System.out.println("Light is Red - Stop!");
+                Thread.sleep(Lights.RED.getTime());
+            }
+        }
+        catch (InterruptedException exc) {
+            System.out.println(lite.getName() + " interrupted.");
+        }
+    }
+    synchronized void myStop() {
+        stopped = true;
+        suspended = false;
+        notifyAll();
+    }
+    synchronized void mySuspend() {
+        suspended = true;
+    }
+    synchronized void myResume() {
+        suspended = false;
+        notify();
+    }
+    
+    synchronized boolean isAlive() {
+    	return lite.isAlive();
+    
+    }
+}

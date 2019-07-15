@@ -1,0 +1,95 @@
+package trafficlight;
+
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+
+public class Lights {
+
+	
+			public static class TrafficLight {
+				static Signal color = Signal.RED;
+				public void change() {
+				    switch(color) {
+				      // Note that you don't have to say Signal.RED
+				      // in the case statement:
+				      case RED:    color = Signal.GREEN;
+				                   break;
+				      case GREEN:  color = Signal.YELLOW;
+				                   break;
+				      case YELLOW: color = Signal.RED;
+				                   break;
+				    }
+				}
+			}
+			  public static class StopGo {
+				  static Movement TrafficMovement = Movement.Go;
+				  public void change() {
+					  switch(TrafficMovement) {
+					      // Note that you don't have to say Signal.RED
+					      // in the case statement:
+					      case Go:    TrafficMovement = Movement.Beware;
+					                   break;
+					      case Beware:  TrafficMovement = Movement.Stop;
+					                   break;
+					      case Stop: TrafficMovement = Movement.Go;
+				                   break;
+					  }
+				  }
+			  }
+			  
+			  public String toString() {
+				  Boolean enterPressed = false;
+				  while(enterPressed != true) {
+					  return "Light is " + TrafficLight.color + " - " + StopGo.TrafficMovement + "!";
+				  }
+				  enterPressed = true;
+				return null;
+			  }
+			  
+			
+			  
+			  
+			
+			//public static void Display() {
+			  //  KeyEvent keyEvent;
+			    //TrafficLight t = new TrafficLight();
+				//int keyCode = keyEvent.getKeyCode();      
+			      //while(keyCode != 13) {
+					//		System.out.println(t);
+					//		t.change();
+					//}
+			
+			  public static void main(String[] args) {
+				  
+				  toString();
+				  //int keyCode = keyEvent.getKeyCode();
+			    
+			   // for(int i = 0; i < 7; i++) {
+			    /*try {
+					while(keyCode != 13) {
+						//for(int i = 0; i < 7; i++) {
+							System.out.println(t);
+							t.change();
+						//}
+					}
+				} catch (IOException e) {
+				
+					e.printStackTrace();
+				}*/
+			  } 
+			  
+			
+			
+			/* Output:
+			The traffic light is RED
+			The traffic light is GREEN
+			The traffic light is YELLOW
+			The traffic light is RED
+			The traffic light is GREEN
+			The traffic light is YELLOW
+			The traffic light is RED
+			*///:~
+
+			
+		}
+

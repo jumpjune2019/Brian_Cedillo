@@ -1,0 +1,25 @@
+package trafficlight;
+
+enum Lights {
+    GREEN(5000), RED(3000), YELLOW(2000);
+	
+    private Integer time;
+    
+    Lights(Integer t) {
+        time = t;
+    }
+    
+    int getTime() {
+        return time;
+    }
+    
+    synchronized Lights getNext() {
+		
+		current++;
+		if(current >= 3) {
+			current = 0; 
+		}
+		
+		return values()[current];
+}
+
